@@ -79,7 +79,13 @@ app.get("/secrets", async (req, res) => {
   }
 });
 
-
+app.get("/submit", (req, res) => {
+  if (req.isAuthenticated()) {
+    res.render("submit.ejs");
+  } else {
+    res.redirect("/login");
+  }
+});
 
 passport.serializeUser((user, cb) => {
   cb(null, user);
