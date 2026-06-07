@@ -87,6 +87,16 @@ app.get("/submit", (req, res) => {
   }
 });
 
+app.get(
+  "/auth/google",
+  passport.authenticate("google", {
+    scope: ["profile", "email"],
+  })
+);
+
+
+
+
 passport.serializeUser((user, cb) => {
   cb(null, user);
 });
