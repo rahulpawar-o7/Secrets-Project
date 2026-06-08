@@ -94,7 +94,13 @@ app.get(
   })
 );
 
-
+app.get(
+  "/auth/google/secrets",
+  passport.authenticate("google", {
+    successRedirect: "/secrets",
+    failureRedirect: "/login",
+  })
+);
 
 
 passport.serializeUser((user, cb) => {
