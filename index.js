@@ -102,6 +102,16 @@ app.get(
   })
 );
 
+app.post(
+  "/login",
+  passport.authenticate("local", {
+    successRedirect: "/secrets",
+    failureRedirect: "/login",
+  })
+);
+
+
+
 
 passport.serializeUser((user, cb) => {
   cb(null, user);
