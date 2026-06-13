@@ -144,6 +144,22 @@ app.post("/register", async (req, res) => {
 });
 
 
+
+app.post("/submit", async (req, res) => {
+  const secret = req.body.secret;
+  console.log(req.user);
+  try {
+    const result = await db.query(
+      "UPDATE users SET secret = $1 WHERE email = $2",
+      [secret, req.user.email]
+    );
+    res.redirect("/secrets");
+  } catch (err) {
+    console.log(err);
+  } 
+});
+
+
 passport.serializeUser((user, cb) => {
   cb(null, user);
 });
