@@ -226,10 +226,6 @@ passport.use(
   )
 );
 
-
-
-
-
 passport.serializeUser((user, cb) => {
   cb(null, user);
 });
