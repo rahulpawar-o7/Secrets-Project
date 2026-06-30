@@ -94,5 +94,20 @@ App will run at `http://localhost:3000`
 | POST | `/submit` | Save secret to DB |
 | GET | `/logout` | Logout user |
 
+
+## Screenshots
+
+### Home Page
+![Home Page](./screenshots/home.png)
+
+### Login Page
+![Login Page](./screenshots/login.png)
+
+### Submit Secret Page
+![Submit Secret](./screenshots/make_your_secret.png)
+
+### View Secret Page
+![View Secret](./screenshots/my_secret.png)
+
 ## Author
 Rahul Pawar — [GitHub](https://github.com/rahulpawar-o7)
